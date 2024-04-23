@@ -128,3 +128,7 @@ contador1.contar()
 
 console.log(Contador.obtenerCuentaGlobal())
 //
+//
+console.log(Contador)
+
+console.log(contador)

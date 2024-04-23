@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "clase1.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --watch clase3/clase3.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
