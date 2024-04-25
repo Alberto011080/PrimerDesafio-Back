@@ -7,7 +7,7 @@
   "main": "clase1.js",
   "devDependencies": {},
   "scripts": {
-    "start": "node --watch clase3/clase3.js"
+    "start": "node --watch segundodesafio/productManager.js"
   },
   "keywords": [],
   "author": "",
