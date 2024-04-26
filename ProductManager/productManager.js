@@ -23,10 +23,9 @@ class ProductManager {
             }
             
             const lastID = productos.lenght > 0 ? productos[productos.lenght -1]. id : 0
-            // const newId = lastID +1
+          
             newProducto.id = lastID+1
-            // const newProducto = {id: newId, ...newProducto}
-            // let {title, description, price, thumbnail, stock, code, id: newId} = newProducto;
+           
             productos.push(newProducto)
             await fs.writeFile(this.path, JSON.stringify(productos, null, 2))
             
@@ -64,6 +63,37 @@ class ProductManager {
         }
         return productoUnico
     }
+
+    async upDateProduct(productoActualizado){
+        
+        try {
+            let nuevodato = await this.getProductById(this.productos)
+            if(nuevodato === this.productos.map){
+            this.productos.map = nuevodato
+            }
+            return productoActualizado
+        } catch (error) {
+            console.error("Producto no encontrado", error)
+            
+        }
+        
+    }
+
+    async deleteProduct(productoBorrado){
+        try {
+            let borrado = await this.getProductById(productos)
+            if(borrado.id === producto.id){
+                fs.rmdirSync(productoBorrado)
+                return productoBorrado
+            }
+            
+        } catch (error) {
+            console.error("Este producto no esta en la lista", error)
+            
+        }
+    }
 }
+
+
 
 module.exports = ProductManager
