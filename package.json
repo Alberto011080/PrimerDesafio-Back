@@ -1,16 +1,18 @@
 {
-  "dependencies": {
-    "express": "^4.19.2"
-  },
   "name": "backend",
   "version": "1.0.0",
   "main": "clase1.js",
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
-    "start": "node --watch segundodesafio/productManager.js"
+    "start": "node --watch clase9/src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "moment": "^2.30.1"
+  }
 }
